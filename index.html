@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Online - Dinda Fernt Felix Fauziah</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            300: '#7cc8fc',
+                            400: '#36b0fa',
+                            500: '#0c94eb',
+                            600: '#0075ca',
+                            700: '#015da3',
+                            800: '#064f86',
+                            900: '#0b426f',
+                            950: '#072a4a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(224, 239, 254, 0.6);
+        }
+        .gradient-blue-bg {
+            background: linear-gradient(135deg, #072a4a 0%, #015da3 50%, #0c94eb 100%);
+        }
+        .gradient-card-header {
+            background: linear-gradient(135deg, #0075ca 0%, #0c94eb 100%);
+        }
+        .animated-badge {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .animated-badge:hover {
+            transform: translateY(-2px) scale(1.02);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between selection:bg-brand-500 selection:text-white">
+
+    <!-- Sticky Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-brand-100 shadow-sm transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-xl gradient-card-header flex items-center justify-center text-white font-bold text-lg shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                        DF
+                    </div>
+                    <span class="font-bold text-lg text-slate-900 group-hover:text-brand-600 transition-colors">Dinda Fernt</span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-600">
+                    <a href="#about" class="hover:text-brand-600 transition-colors">Profil</a>
+                    <a href="#education" class="hover:text-brand-600 transition-colors">Pendidikan</a>
+                    <a href="#experience" class="hover:text-brand-600 transition-colors">Pengalaman</a>
+                    <a href="#achievements" class="hover:text-brand-600 transition-colors">Prestasi</a>
+                    <a href="#skills" class="hover:text-brand-600 transition-colors">Keterampilan</a>
+                    <a href="#contact" class="px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-medium shadow-sm transition-all">Kontak</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-brand-600 hover:bg-brand-50 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-brand-100 bg-white px-4 pt-2 pb-4 space-y-2">
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Profil</a>
+            <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Pendidikan & Leadership</a>
+            <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Pengalaman</a>
+            <a href="#achievements" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Prestasi</a>
+            <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Keterampilan</a>
+            <a href="#contact" class="block w-full text-center mt-2 px-4 py-2 rounded-lg bg-brand-600 text-white font-medium">Kontak Kami</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="gradient-blue-bg text-white relative overflow-hidden py-16 sm:py-24">
+        <!-- Background Decorative Orbs -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-brand-400/20 blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-brand-300/10 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-10">
+                
+                <!-- Avatar & Intro Text -->
+                <div class="flex flex-col items-center md:items-start text-center md:text-left space-y-4 max-w-2xl">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold tracking-wide uppercase text-brand-100">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>Siswa Kreatif SMAN 1 Kersana</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                        Dinda Fernt <br class="hidden sm:inline"><span class="text-brand-200">Felix Fauziah</span>
+                    </h1>
+
+                    <p class="text-brand-100 text-base sm:text-lg leading-relaxed max-w-xl">
+                        Penggiat Seni Tari, Desain Grafis, Foto & Videografi. Berkomitmen mengolah ide dan imajinasi visual menjadi karya nyata yang inspiratif.
+                    </p>
+
+                    <!-- Contact Pills -->
+                    <div class="pt-4 flex flex-wrap justify-center md:justify-start gap-3 text-xs sm:text-sm">
+                        <button onclick="copyToClipboard('083803079772', 'Nomor HP berhasil disalin!')" class="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white flex items-center space-x-2 transition-all">
+                            <i class="fa-solid fa-phone text-brand-300"></i>
+                            <span>0838-0307-9772</span>
+                            <i class="fa-regular fa-copy text-xs opacity-60"></i>
+                        </button>
+
+                        <button onclick="copyToClipboard('dfelixfauziah@gmail.com', 'Email berhasil disalin!')" class="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white flex items-center space-x-2 transition-all">
+                            <i class="fa-solid fa-envelope text-brand-300"></i>
+                            <span>dfelixfauziah@gmail.com</span>
+                            <i class="fa-regular fa-copy text-xs opacity-60"></i>
+                        </button>
+
+                        <span class="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white flex items-center space-x-2">
+                            <i class="fa-solid fa-location-dot text-brand-300"></i>
+                            <span>Cirebon, Jawa Barat</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Profile Badge Box -->
+                <div class="relative group">
+                    <div class="w-48 h-48 sm:w-60 sm:h-60 rounded-3xl bg-gradient-to-tr from-brand-400 to-brand-100 p-1 shadow-2xl transform group-hover:rotate-1 transition-all duration-300">
+                        <div class="w-full h-full rounded-[22px] bg-slate-900/40 backdrop-blur-xl flex flex-col items-center justify-center p-6 text-center border border-white/20">
+                            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white text-brand-700 flex items-center justify-center text-3xl sm:text-4xl shadow-inner mb-3">
+                                <i class="fa-solid fa-user-astronaut"></i>
+                            </div>
+                            <span class="font-bold text-white text-base sm:text-lg">Dinda Fernt</span>
+                            <span class="text-xs text-brand-200 mt-1">Creative Student & Visual Artist</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Profile & Personal Details Section -->
+    <section id="about" class="py-16 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Profil Singkat & Data Diri</h2>
+                <div class="w-16 h-1 bg-brand-500 mx-auto mt-2 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Bio Statement -->
+                <div class="lg:col-span-2 glass-card rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow border border-brand-100">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Tentang Saya</h3>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                        Saya <strong class="text-brand-700">Dinda Fernt Felix Fauziah</strong>, siswa SMAN 1 KERSANA yang kreatif. Memiliki ketertarikan yang kuat di bidang seni tari, desain grafis, foto, dan videografi, saya berkomitmen untuk mengubah ide menjadi pengalaman visual yang menakjubkan.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed text-sm sm:text-base mt-4">
+                        Dengan pengalaman saya sebagai anggota ekstrakurikuler jurnalistik, saya aktif mengeksplorasi dan mengembangkan ide serta pengetahuan di bidang desain grafis, fotografi, serta videografi secara berkelanjutan.
+                    </p>
+
+                    <div class="mt-6 pt-6 border-t border-slate-100 grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
+                        <div class="p-3 rounded-xl bg-brand-50/50">
+                            <span class="block text-xl font-bold text-brand-600">SMAN 1</span>
+                            <span class="text-xs text-slate-500">Kersana</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-brand-50/50">
+                            <span class="block text-xl font-bold text-brand-600">2025-2026</span>
+                            <span class="text-xs text-slate-500">Ketua Paskibra</span>
+                        </div>
+                        <div class="col-span-2 sm:col-span-1 p-3 rounded-xl bg-brand-50/50">
+                            <span class="block text-xl font-bold text-brand-600">6+ Medali</span>
+                            <span class="text-xs text-slate-500">Bahasa Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Info Card -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 shadow-sm border border-brand-100">
+                    <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center space-x-2">
+                        <i class="fa-solid fa-id-card text-brand-600"></i>
+                        <span>Informasi Pribadi</span>
+                    </h3>
+
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start justify-between">
+                            <span class="text-slate-500 flex items-center gap-2"><i class="fa-regular fa-calendar text-brand-500 w-4"></i> TTL:</span>
+                            <span class="font-medium text-slate-800 text-right">Cirebon, 08 Feb 2012</span>
+                        </li>
+                        <li class="flex items-start justify-between">
+                            <span class="text-slate-500 flex items-center gap-2"><i class="fa-solid fa-venus text-brand-500 w-4"></i> Gender:</span>
+                            <span class="font-medium text-slate-800">Perempuan</span>
+                        </li>
+                        <li class="flex items-start justify-between">
+                            <span class="text-slate-500 flex items-center gap-2"><i class="fa-solid fa-hands-praying text-brand-500 w-4"></i> Agama:</span>
+                            <span class="font-medium text-slate-800">Islam</span>
+                        </li>
+                        <li class="flex items-start justify-between">
+                            <span class="text-slate-500 flex items-center gap-2"><i class="fa-solid fa-ruler-vertical text-brand-500 w-4"></i> Fisik:</span>
+                            <span class="font-medium text-slate-800">149 cm / 48 kg</span>
+                        </li>
+                        <li class="flex items-start justify-between pt-2 border-t border-slate-100">
+                            <span class="text-slate-500 flex items-center gap-2"><i class="fa-solid fa-map-pin text-brand-500 w-4"></i> Alamat:</span>
+                            <span class="font-medium text-slate-800 text-right max-w-[160px]">Desa Cileduglor, Kec. Ciledug, Kab. Cirebon</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Leadership Section -->
+    <section id="education" class="py-16 bg-white border-y border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Education Timeline -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-8">
+                        <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center font-bold text-lg shadow-md shadow-brand-500/20">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-bold text-slate-900">Riwayat Pendidikan</h2>
+                            <p class="text-xs text-slate-500">Jejak akademis yang telah ditempuh</p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-6 border-l-2 border-brand-200 space-y-8">
+                        <!-- SMA -->
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-brand-600 border-4 border-white group-hover:scale-125 transition-transform"></div>
+                            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80 hover:border-brand-300 transition-colors">
+                                <span class="text-xs font-semibold text-brand-600 bg-brand-50 px-2.5 py-0.5 rounded-full">Saat Ini</span>
+                                <h3 class="font-bold text-slate-900 text-base mt-1">SMAN 1 KERSANA</h3>
+                                <p class="text-xs text-slate-500">Sekolah Menengah Atas</p>
+                            </div>
+                        </div>
+
+                        <!-- SMP -->
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-brand-400 border-4 border-white group-hover:scale-125 transition-transform"></div>
+                            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80 hover:border-brand-300 transition-colors">
+                                <h3 class="font-bold text-slate-900 text-base">SMPN 2 LOSARI</h3>
+                                <p class="text-xs text-slate-500">Sekolah Menengah Pertama</p>
+                            </div>
+                        </div>
+
+                        <!-- SD -->
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-brand-300 border-4 border-white group-hover:scale-125 transition-transform"></div>
+                            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80 hover:border-brand-300 transition-colors">
+                                <h3 class="font-bold text-slate-900 text-base">SDN 3 CILEDUGLOR</h3>
+                                <p class="text-xs text-slate-500">Sekolah Dasar</p>
+                            </div>
+                        </div>
+
+                        <!-- TK -->
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-brand-200 border-4 border-white group-hover:scale-125 transition-transform"></div>
+                            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80 hover:border-brand-300 transition-colors">
+                                <h3 class="font-bold text-slate-900 text-base">TK AL-AZKIA</h3>
+                                <p class="text-xs text-slate-500">Kec. Pabedilan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leadership Experience -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-8">
+                        <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center font-bold text-lg shadow-md shadow-brand-500/20">
+                            <i class="fa-solid fa-users-gear"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-bold text-slate-900">Pengalaman Kepemimpinan</h2>
+                            <p class="text-xs text-slate-500">Tanggung jawab dan amanah organisasi</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-xl bg-brand-50/60 border border-brand-100 flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center shrink-0 text-sm mt-1">
+                                <i class="fa-solid fa-flag"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900">Ketua Paskibra (Periode 2025–2026)</h3>
+                                <p class="text-xs text-brand-700 font-medium">SMPN 2 Losari</p>
+                                <p class="text-xs text-slate-600 mt-1">Memimpin dan mengoordinasikan seluruh kegiatan keanggotaan Paskibra Jakapoleng.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center shrink-0 text-sm mt-1">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900">Ketua Kelas</h3>
+                                <p class="text-xs text-slate-500">SMPN 2 Losari</p>
+                                <p class="text-xs text-slate-600 mt-1">Mengelola dinamika kelas dan menjadi jembatan komunikasi antara siswa dan wali kelas.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center shrink-0 text-sm mt-1">
+                                <i class="fa-solid fa-wallet"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900">Bendahara Kelas (2 Tahun)</h3>
+                                <p class="text-xs text-slate-500">SMPN 2 Losari</p>
+                                <p class="text-xs text-slate-600 mt-1">Mengelola kas keuangan kelas secara transparan dan akuntabel selama dua periode.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center shrink-0 text-sm mt-1">
+                                <i class="fa-solid fa-pen-nib"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900">Sekretaris Kelas</h3>
+                                <p class="text-xs text-slate-500">SDN 3 Cileduglor</p>
+                                <p class="text-xs text-slate-600 mt-1">Bertanggung jawab atas pencatatan administrasi dan presensi kelas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Extracurricular & Organizational Experience -->
+    <section id="experience" class="py-16 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Pengalaman Ekstrakurikuler</h2>
+                <div class="w-16 h-1 bg-brand-500 mx-auto mt-2 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <!-- OSIS Card -->
+                <div class="bg-white p-6 rounded-2xl border border-brand-100 shadow-sm hover:shadow-md transition-all text-center group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-2xl mx-auto mb-4 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-sitemap"></i>
+                    </div>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-brand-100 text-brand-800">SMPN 2 Losari</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-2">OSIS</h3>
+                    <p class="text-xs text-slate-500 mt-1">Anggota OSIS</p>
+                    <p class="text-xs text-slate-600 mt-3">Aktif dalam perancangan dan pelaksanaan acara sekolah serta kegiatan sosial keorganisasian.</p>
+                </div>
+
+                <!-- Paskibra Card -->
+                <div class="bg-white p-6 rounded-2xl border border-brand-100 shadow-sm hover:shadow-md transition-all text-center group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-2xl mx-auto mb-4 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-brand-100 text-brand-800">Jakapoleng</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-2">Paskibra Jakapoleng</h3>
+                    <p class="text-xs text-brand-600 font-semibold mt-1">Ketua Utama</p>
+                    <p class="text-xs text-slate-600 mt-3">Melatih kedisiplinan, kerapihan formasi, serta memimpin pasukan pengibar bendera.</p>
+                </div>
+
+                <!-- Seni Tari Card -->
+                <div class="bg-white p-6 rounded-2xl border border-brand-100 shadow-sm hover:shadow-md transition-all text-center group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-2xl mx-auto mb-4 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-masks-theater"></i>
+                    </div>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-brand-100 text-brand-800">Seni Visual</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-2">Seni Tari</h3>
+                    <p class="text-xs text-slate-500 mt-1">Anggota Ekstrakurikuler</p>
+                    <p class="text-xs text-slate-600 mt-3">Mengekspresikan bakat seni gerak, melestarikan tarian daerah, serta tampil di ajang kejuaraan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Medals Section -->
+    <section id="achievements" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Prestasi & Penghargaan</h2>
+                <p class="text-sm text-slate-500 mt-1">Pencapaian luar biasa di bidang Seni, Akademik, dan Keorganisasian</p>
+                <div class="w-16 h-1 bg-brand-500 mx-auto mt-2 rounded-full"></div>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-8" id="achievement-filters">
+                <button onclick="filterAchievements('all')" class="filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-brand-600 text-white shadow-sm transition-all">Semua</button>
+                <button onclick="filterAchievements('seni')" class="filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-brand-50 transition-all">Seni & Kreatif</button>
+                <button onclick="filterAchievements('akademik')" class="filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-brand-50 transition-all">Akademik</button>
+                <button onclick="filterAchievements('organisasi')" class="filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-brand-50 transition-all">Kepemimpinan & Olahraga</button>
+            </div>
+
+            <!-- Badges Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="achievements-grid">
+                
+                <!-- Tari Saman -->
+                <div class="achievement-item seni bg-amber-50/50 border border-amber-200/80 p-4 rounded-xl flex items-center space-x-3 animated-badge">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500 text-white flex items-center justify-center shrink-0 shadow-sm">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-amber-700">Tingkat Seni</span>
+                        <h4 class="font-bold text-slate-900 text-sm">Juara 3 Tari Saman</h4>
+                    </div>
+                </div>
+
+                <!-- Lomba Mewarnai -->
+                <div class="achievement-item seni bg-amber-50/50 border border-amber-200/80 p-4 rounded-xl flex items-center space-x-3 animated-badge">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500 text-white flex items-center justify-center shrink-0 shadow-sm">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-amber-700">Seni Rupa</span>
+                        <h4 class="font-bold text-slate-900 text-sm">Juara 1 Lomba Mewarnai & Menggambar</h4>
+                    </div>
+                </div>
+
+                <!-- Menulis Nasional -->
+                <div class="achievement-item seni bg-amber-50/50 border border-amber-200/80 p-4 rounded-xl flex items-center space-x-3 animated-badge">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500 text-white flex items-center justify-center shrink-0 shadow-sm">
+                        <i class="fa-solid fa-feather"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-amber-700">Nasional</span>
+                        <h4 class="font-bold text-slate-900 text-sm">Juara Lomba Menulis Nasional</h4>
+                    </div>
+                </div>
+
+                <!-- Medali Emas BI 4x -->
+                <div class="achievement-item akademik bg-brand-50/60 border border-brand-200 p-4 rounded-xl flex items-center space-x-3 animated-badge">
+                    <div class="w-10 h-10 rounded-lg bg-yellow-500 text-white flex items-center justify-center shrink-0 shadow-sm">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-brand-700">Bahasa Indonesia</span>
+                        <h4 class="font-bold text-slate-900 text-sm">Peraih Medali Emas (4x)</h4>
+                    </div>
+                </div>
+
+                <!-- Medali Perak BI 1x -->
+                <div class="achievement-item akademik bg-brand-50/60 border border-brand-200 p-4 rounded-xl flex items-center space-x-3 animated-badge">
+                    <div class="w-10 h-10 rounded-lg bg-slate-400 text-white flex items-center justify-center shrink-0 shadow-sm">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-brand-700">Bahasa Indonesia</span>
+                        <h4 class="font-bold text-slate-900 text-sm">Peraih Medali Perak (1x)</h4>
+                    </div>
+                </div>
+
+                <!-- Medali Perunggu BI 1x -->
+                <div class="achievement-item akademik bg-brand-50/60 border border-brand-200 p-4 rounded-xl flex items-center space-x-3 animated-badge">
+                    <div class="w-10 h-10 rounded-lg bg-amber-700 text-white flex items-center justify-center shrink-0 shadow-sm">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-brand-700">Bahasa Indonesia</span>
+                        <h4 class="font-bold text-slate-900 text-sm">Peraih Medali Perunggu (1x)</h4>
+                    </div>
+                </div>
+
+                <!-- Medali Emas PPKN -->
+                <div class="achievement-item akademik bg-brand-50/60 border border-brand-200 p-4 rounded-xl flex items-center space-x-3 animated-badge">
+                    <div class="w-10 h-10 rounded-lg bg-yellow-500 text-white flex items-center justify-center shrink-0 shadow-sm">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-brand-700">PPKN</span>
+                        <h4 class="font-bold text-slate-900 text-sm">Peraih Medali Emas (1x)</h4>
+                    </div>
+                </div>
+
+                <!-- Medali Perak PPKN -->
+                <div class="achievement-item akademik bg-brand-50/60 border border-brand-200 p-4 rounded-xl flex items-center space-x-3 animated-badge">
+                    <div class="w-10 h-10 rounded-lg bg-slate-400 text-white flex items-center justify-center shrink-0 shadow-sm">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-brand-700">PPKN</span>
+                        <h4 class="font-bold text-slate-900 text-sm">Peraih Medali Perak (2x)</h4>
+                    </div>
+                </div>
+
+                <!-- Medali Perak IPS -->
+                <div class="achievement-item akademik bg-brand-50/60 border border-brand-200 p-4 rounded-xl flex items-center space-x-3 animated-badge">
+                    <div class="w-10 h-10 rounded-lg bg-slate-400 text-white flex items-center justify-center shrink-0 shadow-sm">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-brand-700">IPS</span>
+                        <h4 class="font-bold text-slate-900 text-sm">Peraih Medali Perak (2x)</h4>
+                    </div>
+                </div>
+
+                <!-- Juara Kelas Ke-3 -->
+                <div class="achievement-item akademik bg-brand-50/60 border border-brand-200 p-4 rounded-xl flex items-center space-x-3 animated-badge">
+                    <div class="w-10 h-10 rounded-lg bg-brand-600 text-white flex items-center justify-center shrink-0 shadow-sm">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-brand-700">Peringkat Sekolah</span>
+                        <h4 class="font-bold text-slate-900 text-sm">Juara Kelas Ke-3</h4>
+                    </div>
+                </div>
+
+                <!-- Ketua Paskibra -->
+                <div class="achievement-item organisasi bg-emerald-50/60 border border-emerald-200 p-4 rounded-xl flex items-center space-x-3 animated-badge">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-sm">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-emerald-700">Amanah Leadership</span>
+                        <h4 class="font-bold text-slate-900 text-sm">Ketua Paskibra Periode 2025-2026</h4>
+                    </div>
+                </div>
+
+                <!-- Juara 1 Estafet Air -->
+                <div class="achievement-item organisasi bg-emerald-50/60 border border-emerald-200 p-4 rounded-xl flex items-center space-x-3 animated-badge">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-sm">
+                        <i class="fa-solid fa-person-swimming"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-emerald-700">Olahraga</span>
+                        <h4 class="font-bold text-slate-900 text-sm">Juara 1 Estafet Air</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills, Languages & Hobbies -->
+    <section id="skills" class="py-16 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Keterampilan & Minat</h2>
+                <div class="w-16 h-1 bg-brand-500 mx-auto mt-2 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Creative Skills -->
+                <div class="bg-white p-6 rounded-2xl border border-brand-100 shadow-sm">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900">Keterampilan Utamamu</h3>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-center space-x-3">
+                            <i class="fa-solid fa-icons text-brand-600 w-5 text-center"></i>
+                            <span class="text-sm font-semibold text-slate-800">Berbakat Seni Tari</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-center space-x-3">
+                            <i class="fa-solid fa-book text-brand-600 w-5 text-center"></i>
+                            <span class="text-sm font-semibold text-slate-800">Karangan Novel / Cerita</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-center space-x-3">
+                            <i class="fa-solid fa-camera-retro text-brand-600 w-5 text-center"></i>
+                            <span class="text-sm font-semibold text-slate-800">Foto & Videografi</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-center space-x-3">
+                            <i class="fa-solid fa-photo-film text-brand-600 w-5 text-center"></i>
+                            <span class="text-sm font-semibold text-slate-800">Pengeditan Media Visual</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="bg-white p-6 rounded-2xl border border-brand-100 shadow-sm">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-language"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900">Kemampuan Bahasa</h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span class="text-slate-800">Bahasa Indonesia</span>
+                                <span class="text-brand-600">Fasih / Utama</span>
+                            </div>
+                            <div class="w-full h-2 rounded-full bg-slate-100 overflow-hidden">
+                                <div class="h-full bg-brand-600 rounded-full w-full"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span class="text-slate-800">Bahasa Jawa</span>
+                                <span class="text-brand-600">Aktif</span>
+                            </div>
+                            <div class="w-full h-2 rounded-full bg-slate-100 overflow-hidden">
+                                <div class="h-full bg-brand-500 rounded-full w-[90%]"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span class="text-slate-800">Bahasa Sunda</span>
+                                <span class="text-brand-600">Aktif</span>
+                            </div>
+                            <div class="w-full h-2 rounded-full bg-slate-100 overflow-hidden">
+                                <div class="h-full bg-brand-400 rounded-full w-[85%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hobbies -->
+                <div class="bg-white p-6 rounded-2xl border border-brand-100 shadow-sm">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900">Hobi & Kegemaran</h3>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="p-3 rounded-xl bg-brand-50/50 border border-brand-100 flex flex-col items-center text-center">
+                            <i class="fa-solid fa-music text-brand-600 text-xl mb-1"></i>
+                            <span class="text-xs font-medium text-slate-800">Mendengar Musik</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-brand-50/50 border border-brand-100 flex flex-col items-center text-center">
+                            <i class="fa-solid fa-person-swimming text-brand-600 text-xl mb-1"></i>
+                            <span class="text-xs font-medium text-slate-800">Berenang</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-brand-50/50 border border-brand-100 flex flex-col items-center text-center">
+                            <i class="fa-solid fa-utensils text-brand-600 text-xl mb-1"></i>
+                            <span class="text-xs font-medium text-slate-800">Memasak</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-brand-50/50 border border-brand-100 flex flex-col items-center text-center">
+                            <i class="fa-solid fa-book-open-reader text-brand-600 text-xl mb-1"></i>
+                            <span class="text-xs font-medium text-slate-800">Membaca Novel</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Training & Webinar Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-brand-900 via-brand-800 to-brand-700 rounded-3xl p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl relative overflow-hidden">
+                <div class="space-y-2 text-center md:text-left z-10">
+                    <span class="text-xs font-semibold px-3 py-1 rounded-full bg-white/20 text-brand-100 uppercase tracking-wider">Pelatihan & Webinar</span>
+                    <h3 class="text-2xl font-bold">Program Pelatihan TUNAS HIJAU</h3>
+                    <p class="text-brand-100 text-sm">Peserta Aktif Pelatihan Tunas Hijau (Tahun 2025)</p>
+                </div>
+                <div class="shrink-0 z-10">
+                    <a href="mailto:dfelixfauziah@gmail.com" class="px-6 py-3 rounded-xl bg-white text-brand-800 font-bold hover:bg-brand-50 transition-colors inline-flex items-center space-x-2 shadow-md">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Kirim Pesan</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                
+                <div class="text-center md:text-left space-y-1">
+                    <span class="text-lg font-bold text-white">Dinda Fernt Felix Fauziah</span>
+                    <p class="text-xs text-slate-400">Desa Cileduglor, Kec. Ciledug, Kab. Cirebon, Jawa Barat</p>
+                </div>
+
+                <div class="flex items-center space-x-4 text-sm">
+                    <a href="tel:083803079772" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-brand-600 text-white flex items-center justify-center transition-colors" title="Telepon">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                    <a href="mailto:dfelixfauziah@gmail.com" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-brand-600 text-white flex items-center justify-center transition-colors" title="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-slate-800 text-center text-xs text-slate-500">
+                <p>&copy; 2026 Dinda Fernt Felix Fauziah. Seluruh hak cipta dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none bg-slate-900 text-white px-5 py-3 rounded-xl shadow-2xl flex items-center space-x-3 border border-slate-700">
+        <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+        <span id="toast-message" class="text-xs font-medium">Teks berhasil disalin!</span>
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Mobile menu drawer toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Copy text to clipboard utility
+        function copyToClipboard(text, message) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            showToast(message);
+        }
+
+        // Custom Toast Notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+
+            toastMsg.textContent = message;
+            toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            }, 3000);
+        }
+
+        // Achievement Category Filter Logic
+        function filterAchievements(category) {
+            const items = document.querySelectorAll('.achievement-item');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+
+            // Reset button styles
+            filterBtns.forEach(btn => {
+                btn.classList.remove('bg-brand-600', 'text-white');
+                btn.classList.add('bg-slate-100', 'text-slate-600');
+            });
+
+            // Highlight active button
+            event.target.classList.remove('bg-slate-100', 'text-slate-600');
+            event.target.classList.add('bg-brand-600', 'text-white');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
